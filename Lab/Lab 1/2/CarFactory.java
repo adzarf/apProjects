@@ -6,10 +6,10 @@ public class CarFactory {
     public Car buildCar() {
         Car car = new Car();
 
-        System.out.println("Enter model: ");
+        System.out.print("Enter model: ");
         car.setModel(in.nextLine());
 
-        System.out.println("Enter Horse Power: ");
+        System.out.print("Enter Horse Power: ");
         car.setHorsePower(in.nextInt());
 
         return car;
