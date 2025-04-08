@@ -46,7 +46,10 @@ class Car {
     }
 
     public String getInfo() {
-        return "Print Car Info:\n" + "-".repeat(15) + "\nModel - " + model + "\nHorse Power - " + horsePower + "\n";
+        return "Print Car Info:\n" +
+                "-".repeat(15) +
+                "\nModel - " + model +
+                "\nHorse Power - " + horsePower + "\n";
     }
 }
 
