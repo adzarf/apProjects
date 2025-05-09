@@ -44,16 +44,17 @@ public class StudentList {
         Scanner keyin = new Scanner(System.in);
         ArrayList<Student> students = new ArrayList<>();
 
-        System.out.print("Enter number of students: ");
-        int numOfStudents = Integer.parseInt(keyin.nextLine());
-
         // Students' name - mark examples:
         // Ahmad - 74, John - 46, Zety - 67
 
         // Get names and marks
-        for (int i = 0; i < numOfStudents; i++) {
+        System.out.print("Please type \"stop\" in name to finish entering student details.");
+
+        while (true) {
             System.out.print("\nName: ");
             String name = keyin.nextLine();
+            
+            if (name.equalsIgnoreCase("stop")) break;
 
             System.out.print("Mark: ");
             int marks = Integer.parseInt(keyin.nextLine());
