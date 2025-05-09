@@ -63,7 +63,7 @@ public class StudentList {
         // List names, marks and status
         for (int i = 0; i < students.size(); i++) {
             System.out.printf(
-             "\n%d. %s - %d - %s",
+                    "\n%d. %s - %d - %s",
                     i + 1,
                     students.get(i).getName(),
                     students.get(i).getMark(),
