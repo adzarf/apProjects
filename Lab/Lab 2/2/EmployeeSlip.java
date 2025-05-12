@@ -13,8 +13,8 @@ abstract class Employee {
     }
 
     public void printInfo() {
-        System.out.println("Name: " + name);
-        System.out.println("IC No.: " + icNo);
+        System.out.println("Name                 : " + name);
+        System.out.println("IC No.               : " + icNo);
     }
 
     public abstract void printSlip();
@@ -60,11 +60,11 @@ class ContractStaff extends Employee implements DailyJob, HourlyJob {
     }
 
     public void printSlip() {
-        System.out.println("CONTRACT STAFF SALARY SLIP");
+        System.out.println("CONTRACT STAFF SALARY SLIP\n");
         printInfo();
-        System.out.printf("Working Days & Rate: %d x RM %.2f\n", workDays, RATE);
+        System.out.printf("Working Days & Rate  : %d x RM %.2f\n", workDays, RATE);
         System.out.printf("Overtime Hours & Rate: %d x RM %.2f\n", overtimeHours, OVERTIME_RATE);
-        System.out.printf("Total Salary: RM %.2f\n", calculateSalary());
+        System.out.printf("Total Salary         : RM %.2f\n", calculateSalary());
     }
 
     public double calculateSalary() {
@@ -93,10 +93,10 @@ class PartTimeStaff extends Employee implements HourlyJob {
     }
 
     public void printSlip() {
-        System.out.println("PARTTIME STAFF SALARY SLIP");
+        System.out.println("PARTTIME STAFF SALARY SLIP\n");
         printInfo();
-        System.out.printf("Working Hours & Rate: %d x RM %.2f\n", workHours, PART_TIME_RATE);
-        System.out.printf("Total Salary: RM %.2f\n", calculateWage());
+        System.out.printf("Working Hours & Rate : %d x RM %.2f\n", workHours, PART_TIME_RATE);
+        System.out.printf("Total Salary         : RM %.2f\n", calculateWage());
     }
 
     public double calculateWage() {
