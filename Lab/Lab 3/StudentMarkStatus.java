@@ -3,9 +3,6 @@
 // 1. AMMAR DANISH BIN ANWAR ZAMSANI
 // 2. AQIL DZARFAN BIN ASRUL SHARAFF
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 class Student {
     private String name;
     private String course;
