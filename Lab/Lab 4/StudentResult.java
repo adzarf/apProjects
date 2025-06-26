@@ -92,7 +92,7 @@ public class StudentResult {
                 }
             }
             if (choice != 6) {
-                System.out.println("Press enter to continue...");
+                System.out.print("Press enter to continue...");
                 keyin.nextLine();
             }
         }
