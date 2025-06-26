@@ -59,7 +59,49 @@ public class StudentResult {
             System.out.print("Your choice: ");
             choice = keyin.nextInt();
             keyin.nextLine();
+            System.out.println();
 
+            switch (choice) {
+                case 1 -> {
+                    System.out.println("Original list:");
+                    students.stream()
+                            .forEach(stud -> System.out.println(stud.toString()));
+                    System.out.println("Press enter to continue...");
+                    keyin.nextLine();
+                }
+                case 2 -> {
+                    System.out.println("Sort by name list:");
+                    students.stream()
+                            .sorted(Comparator.comparing(Student::getName))
+                            .forEach(stud -> System.out.println(stud.toString()));
+                    System.out.println("Press enter to continue...");
+                    keyin.nextLine();
+                }
+                case 3 -> {
+                    System.out.println("Sort by mark list:");
+                    students.stream()
+                            .sorted(Comparator.comparing(Student::getMark).reversed())
+                            .forEach(stud -> System.out.println(stud.toString()));
+                    System.out.println("Press enter to continue...");
+                    keyin.nextLine();
+                }
+                case 4 -> {
+                    System.out.println("Students with mark > 70:");
+                    students.stream()
+                            .filter(stud -> stud.getMark() > 70)
+                            .forEach(stud -> System.out.println(stud.toString()));
+                    System.out.println("Press enter to continue...");
+                    keyin.nextLine();
+                }
+                case 5 -> {
+                    System.out.println("Students under SCSE Course:");
+                    students.stream()
+                            .filter(stud -> stud.getCourse() == "SCSE")
+                            .forEach(stud -> System.out.println(stud.toString()));
+                    System.out.println("Press enter to continue...");
+                    keyin.nextLine();
+                }
+            }
         }
     }
 }
